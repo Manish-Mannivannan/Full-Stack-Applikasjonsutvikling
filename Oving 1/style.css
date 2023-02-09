@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&display=swap');
+
+:root {
+  font-family: Montserrat, Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  overflow: hidden;
+
+  
+  color: var(--bg-color-light);
+  background-color: var(--bg-color-dark);
+
+  --bg-color-light: #f6f6f6;
+  --bg-color-dark: #2f2f2f;
+
+  --color-green: #3CFEAA;
+  --color-green-dark: #39eb9d;
+  --color-dark: #3B3B3B;
+  --color-dark-dark: #222222;
+  --color-blue: #3c46fe;
+  --color-blue-light: #575fff;
+  --color-red: #fe3c3c;
+  --color-red-light: #fc7d7d;
+  --color-yellow: #fffc2e;
+  --color-yellow-light: #fffd93;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(238, 238, 238);
+  border-radius: 100vw;
+  margin-block: .8em;
+  background: var(--color-dark-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-dark);
+  border: .1em solid var(--color-red);
+  border-radius: 100vw;
+  transition: .2s ease-in;
+}
+
+.page-container{
+  overflow: hidden scroll;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+
+.container {
+  scroll-snap-align: center;
+  margin: 0;
+  padding: 0;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+a {
+  font-weight: 500;
+  color: white;
+  text-decoration: inherit;
+}
+  
+a:hover {
+  color: #535bf2;
+}
+  
+input,
+button,
+select {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  margin: .3em;
+  padding: .9em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  color: #ffffff;
+  background-color: #0f0f0f98;
+  transition: border-color .25s;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .2);
+}
+  
+button {
+  cursor: pointer;
+}
+  
+button:hover {
+  border-color: var(--color-red);
+  background-color: var(--color-dark);
+  scale: 1.04;
+  color: var(--color-red);
+}
+  
+button:active {
+  scale: .96;
+}
+  
+input:focus-within {
+  border-color: var(--color-red);
+  scale: 1.04;
+}
+  
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+  -webkit-text-fill-color: #ffffff !important;
+  background-color: var(--color-dark-dark);
+  box-shadow: 0 0 0 400px var(--color-dark-dark) inset !important;
+  -webkit-box-shadow: 0 0 0 400px var(--color-dark-dark) inset !important;
+  border: 1px solid transparent;
+  outline: none;
+  border-color: var(--color-red);
+}
+  
+input,
+button {
+  outline: none;
+}
+  
+input::-webkit-input-placeholder {
+  color: #999;
+}
+  
+input[type=number]{
+  appearance: none;
+  width: 2.5em;
+}
+  
+input[type=number]::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+input:-webkit-autofill{
+  border: 1px solid transparent;
+  border-color: var(--color-dark-dark);
+}
+
+.title1{
+  font-size: 3em;
+  margin: 1em;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  50%{
+    scale: 1.1;
+    filter: drop-shadow(2em 2em 2em var(--color-red));
+    color: var(--color-red);
+  }
+}
+
+.container2 {
+  scroll-snap-align: center;
+  margin: 0em;
+  padding: 5em;
+  height: 90vh;
+  display: grid;
+  grid-template:
+    [row1-start] "header header header" 15vh [row1-end]
+    [row2-start] "main main main" 65vh [row2-end]
+    [row3-start] "footer footer footer" 15vh [row3-end]
+    / auto 20em auto;
+}
+
+.title2{
+  font-size: 3em;
+  grid-area: header;
+  justify-self: center;
+}
+
+.logo{
+  max-height: 6em;
+  max-width: 6em;
+  grid-area: header;
+  align-self: center;
+}
+
+#logo1{
+  justify-self: start;
+}
+
+#logo2{
+  justify-self: end;
+}
+
+.main{
+  display: flex;
+  width: 33%;
+  grid-area: main;
+}
+
+#main1{
+  justify-self: start;
+}
+
+.main1left{
+  display: block;
+  width: 50%;
+}
+
+.main1right{
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: xxx-large;
+}
+
+#main2{
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+}
+
+#hidingText{
+  transition: .5s ease-in;
+}
+
+#main3{
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#list{
+  height: 20em;
+  overflow: auto;
+  overflow-wrap: break-word;
+}
+
+#footer{
+  grid-area: footer;
+  justify-self: center;
+  align-self: center;
+  width: 60%;
+  direction: "left"; 
+  height: "100px";
+}

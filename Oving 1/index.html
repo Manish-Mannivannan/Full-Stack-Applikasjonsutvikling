@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Meme Page</title>
+</head>
+
+<body>
+  <div class="page-container">
+    <div class="container">
+      <h1 class="title1">Enter the Vault</h1>
+      <a>
+        <img src="Content/pepe-meme.gif">
+      </a>
+      <h3>*Say hi to Pepe, enter by scrolling*</h3>
+    </div>
+  
+    <div class="container2">
+      <img src="Content/logo.png" class="logo" id="logo1">
+      <h1 class="title2">The vault</h1>
+      <img src="Content/logo.png" class="logo" id="logo2">
+      <div class="main" id="main1">
+        <div class="main1left">
+          <button id="up">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10em" height="10em" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+            </svg>
+          </button>
+          <button id="down">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10em" height="10em" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="main1right">
+          <h1 id="UDNumber">0</h1>
+        </div>
+      </div>
+      
+      <div class="main" id="main2">
+        <h3 id="hidingText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+          Consequuntur molestias quisquam fugiat doloremque facere quas quibusdam nemo 
+          iure ab minima possimus placeat omnis, commodi voluptates molestiae a 
+          perspiciatis beatae magnam.
+        </h3>
+        <button id="visibilityButton">Hide</button>
+      </div>
+      
+      <div class="main" id="main3">
+        <input type="text" id="addText" placeholder="Input word you want to add to list">
+        <ol id="list"></ol>
+        <button id="addTextButton">Add</button>
+      </div>
+
+      <marquee id="footer">
+        This meme gallary is a private collection made for the boys, and therefore must be kept a secret.
+        A leak may cause the boys a case. For this reason the memes have been hidden from you as an
+        unouthorized user. Solve the puzzle to prove you have access
+      </marquee>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
