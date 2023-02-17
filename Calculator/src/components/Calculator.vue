@@ -1,8 +1,6 @@
 <script setup lang="ts">
   import { ref } from 'vue';
 
-  
-
   let calculation = ref("");
   let preCalculation = ref("");
   let log = ref("");
@@ -11,12 +9,7 @@
   
   function addNumber(x: Number){
     if (calculation.value != "0" || x != 0) {
-      if (calculation.value == "0" && x != 0) {
-        calculation.value = String(x);
-      }else{
-        calculation.value += x;
-
-      }
+      calculation.value == "0" && x != 0 ? calculation.value = String(x) : calculation.value += x;
     }
     calcInit(0);
   }
@@ -75,18 +68,11 @@
   }
 
   function addDecimal() {
-    if (!calculation.value.split(" ").slice(-1)[0].includes(".")) {
-      calculation.value += ".";
-    }else{
-      quickAlert(".");
-    }
+    !calculation.value.split(" ").slice(-1)[0].includes(".") ? calculation.value += "." : quickAlert(".");
   }
 
   function isOperator(testOp: string): boolean{
-    if (testOp == "*" || testOp == "/" || testOp == "+" || testOp == "-") {
-      return true;
-    }
-    return false;
+    return testOp == "*" || testOp == "/" || testOp == "+" || testOp == "-";
   }
 
   function backspace(){
@@ -147,7 +133,7 @@
   <div class="container" id="calculatorContainer">
     <div class="calculatorBox">
       <div class="inputArea">
-        <br><textarea id="mathInput" placeholder="Input Math" v-model="calculation"></textarea>
+        <br><textarea id="mathInput" placeholder="Input Math" v-model="calculation" disabled></textarea>
         <!-- <br><h1 id="mathInput" placeholder="Input Math">{{ calculation }}</h1> -->
         <h3 id="preCalc">{{ preCalculation }}</h3>
       </div>
