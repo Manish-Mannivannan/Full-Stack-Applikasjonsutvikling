@@ -61,6 +61,13 @@ button:active {
   scale: 0.96;
 }
 
+button[disabled], button:hover[disabled]{
+  border-color: transparent;
+  scale: 0.96;
+  opacity: 0.5;
+  color: #0f0f0f;
+}
+
 input:focus-within {
   border-color: var(--color-red);
   scale: 1.04;
@@ -125,6 +132,15 @@ textarea {
 
   button:hover {
     background-color: var(--color-dark-dark);
+  }
+
+  button[disabled], button:hover[disabled]{
+    border-color: transparent;
+    background-color: var(--bg-field-dark);
+    color: #ffffff;
+    scale: 0.96;
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 
   input::-webkit-input-placeholder {

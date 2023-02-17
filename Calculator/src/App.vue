@@ -1,6 +1,5 @@
 <script setup lang="ts">
   import { RouterLink, RouterView } from "vue-router";
-
 </script>
 
 <template>
@@ -9,7 +8,7 @@
     <nav>
       <RouterLink to="/">Calculator</RouterLink>
       <RouterLink to="/about">About</RouterLink>
-      <RouterLink to="/Contact">Contact</RouterLink>
+      <RouterLink to="/contact">Contact</RouterLink>
     </nav>
   </div>
 

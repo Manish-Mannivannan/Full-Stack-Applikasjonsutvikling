@@ -1,6 +1,8 @@
 <script setup lang="ts">
   import { ref } from 'vue';
 
+  
+
   let calculation = ref("");
   let preCalculation = ref("");
   let log = ref("");
@@ -102,7 +104,7 @@
     calcInit(0);
   }
 
-  function empty() {
+  function clear() {
     calculation.value = "";
     preCalculation.value = "__-";
   }
@@ -145,11 +147,12 @@
   <div class="container" id="calculatorContainer">
     <div class="calculatorBox">
       <div class="inputArea">
-        <br><textarea id="mathInput" placeholder="Input Math">{{ calculation }}</textarea>
+        <br><textarea id="mathInput" placeholder="Input Math" v-model="calculation"></textarea>
+        <!-- <br><h1 id="mathInput" placeholder="Input Math">{{ calculation }}</h1> -->
         <h3 id="preCalc">{{ preCalculation }}</h3>
       </div>
       <div class="calculatorButtons">
-        <button type="button" id="empty" @click="empty()">C</button>
+        <button type="button" id="clear" @click="clear()">C</button>
         <button type="button" id="plusminus" @click="negateCurrent()">
           <svg
             xmlns="http://www.w3.org/2000/svg"
